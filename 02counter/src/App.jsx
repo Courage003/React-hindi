@@ -13,7 +13,17 @@ function App() {
     console.log("Clicked", counter)
     //counter = counter + 1
     if(counter<10){
+      /*setCounter(counter + 1)
       setCounter(counter + 1)
+      setCounter(counter + 1)
+      setCounter(counter + 1)*/
+      //will be updated only once because of batches distribution in fibre mode
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      //here we are taking previous state callback and hence all are operating
+
     }
     
   }
